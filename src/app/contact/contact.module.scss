@@ -1,0 +1,91 @@
+@use '@styles/_extends';
+@use '@styles/_vars' as *;
+.contact{
+  .text{
+    margin-bottom: 3rem;
+    padding-right: 1.5rem;
+    @media only screen and (max-width: 767px){
+      padding-right: 0;
+    }
+    [class='section-title']{
+      text-align: left;
+      margin-bottom: 3.6rem;
+    }
+    ul li{
+      font-size: 1.5rem;
+      color: #353535;
+      line-height: 3.6rem;
+      span{
+        color: $clr-gray;
+        @extend %d-inline;
+        width: 8.5rem;
+        &::first-letter{
+          @extend %text-cap;
+        }
+      }
+    }
+  }
+  form{
+    padding-left: 1.5rem;
+    @media only screen and (max-width: 767px){
+      padding-left: 0;
+    }
+    input, textarea{
+      padding-left: 2rem;
+      width: 100%;
+      height: 4.6rem;
+      font-size: 1.5rem;
+      color: #727171;
+      border-radius: .2rem;
+      border: .1rem solid rgba(0, 0, 0, 0.1);
+      margin-bottom: 3rem;
+    }
+    .input{
+      @extend %d-flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      input{
+        flex-basis: 47.5%;
+        @media only screen and (max-width: 991px){
+          flex-basis: 100%;
+        }
+      }
+    }
+    textarea{
+      resize: none;
+      padding-top: 1.2rem;
+      height: 10rem;
+    }
+    button{
+      @extend %primary-btn;
+      @extend %text-cap;
+      padding: 1.5rem 3.8rem;
+    }
+  }
+}
+.address{
+  padding-bottom: 7rem;
+  .text{
+    border-top: .1rem solid rgba(0, 0, 0, 0.1);
+    padding-top: 10rem;
+    .item{
+      margin-bottom: 3rem;
+      h4{
+        color: #353535;
+        font-weight: 700;
+        margin-bottom: 1.8rem;
+        font-size: 2.4rem;
+        @extend %text-cap;
+      }
+      p{
+        line-height: 3.2rem;
+        margin-bottom: .5rem;
+      }
+      a{
+        font-size: 1.8rem;
+        color: #353535;
+        font-weight: 700;
+      }
+    }
+  }
+}
